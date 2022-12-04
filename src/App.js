@@ -28,7 +28,7 @@ function App() {
     <USER_CONTEXT.Provider value={value}>
       <div>
         <Navbar></Navbar>
-        <h1>My first deploy in Vercel</h1>
+        <h1 style={{textAlign: 'center'}}>My first deploy in Vercel</h1>
         <h2 style={{ textAlign: 'center' }}><span style={{ color: 'red' }}>useReducer</span> with <span style={{ color: 'red' }}>context api</span> in this project</h2>
         <Routes>
           <Route path='/' element={<Home />} />
