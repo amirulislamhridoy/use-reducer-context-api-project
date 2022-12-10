@@ -1,6 +1,8 @@
 import { CARD, ERROR, LOADING, REMOVE, SUCCESS } from "./ReducerTypes"
 
 export const reducer = (state, action) => {
+  const dataNum = action?.payload?.newId
+  if(dataNum){state?.card?.splice(dataNum,1)}
     switch (action.type) {
       case LOADING:
         return {
@@ -31,7 +33,8 @@ export const reducer = (state, action) => {
       case REMOVE:
         return {
           ...state,
-          card: [...state.card.filter(d => d !== action.payload)]
+          // card: [...state.card.filter(d => d !== action.payload)]
+          card: [...state.card]
         }
       default:
         return state

@@ -7,7 +7,7 @@ const Selected = () => {
 
     return (
         <div className='home'>
-            {data?.card?.map((d, i) => <User user={d} key={i}></User>)}
+            {data?.card?.map((d, i) => <User user={d} i={i} key={i}></User>)}
         </div>
     );
 };
